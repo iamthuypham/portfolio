@@ -1,0 +1,17 @@
+.project-list {
+  background-color: #ff5492;
+  color: white;
+}
+
+.project-block {
+  position: relative;
+  padding: 0;
+  min-height: 275px;
+}
+
+.project {
+  line-height: 275px;
+}
+.project:hover {
+  color: black;
+}

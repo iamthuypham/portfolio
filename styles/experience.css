@@ -1,0 +1,45 @@
+.skill-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skill-block {}
+
+.skill {
+  color: black;
+  margin-top: 3%;
+  padding: 1%;
+}
+
+.skill h1,
+p {
+  vertical-align: middle;
+}
+
+.skill h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+}
+
+.skill p {
+  margin: 0;
+  color: #ff5492;
+}
+
+@media (min-width: 640px) {
+  .skill h1 {
+    font-size: 50px;
+  }
+  .skill h1,
+  p {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-block {
+    display: flex;
+    justify-content: center;
+  }
+}
