@@ -22,6 +22,7 @@ section {
   text-align: center;
   font-family: 'Nunito', sans-serif;
   font-size: 30px;
+  padding: 5% 0;
 }
 
 a,
@@ -98,19 +99,11 @@ h2 {
 .journey {
   background: linear-gradient(to top, rgb(35, 35, 35), rgb(28, 0, 13));
   background: -webkit-linear-gradient(to top, rgb(35, 35, 35), rgb(28, 0, 13));
-  padding: 5% 0;
 }
 
 .container {
   display: flex;
   align-items: stretch;
-}
-
-.scrollbar {
-  /*display: table;*/
-  /*padding: 0;*/
-  /*min-width: 2%;*/
-  /*display: table-cell;*/
 }
 
 .bar {
@@ -123,26 +116,9 @@ h2 {
   /*cursor: pointer;*/
 }
 
-.fill {
-  /*background-color: white;*/
-  /*width: 36%;*/
-  /*height: 0.25rem;*/
-  /*border-radius: 2px;*/
-}
-
-.thumb {
-  
-  
-  /*margin-left: -0.25rem;*/
-  /*margin-top: -0.25rem;*/
-  /*border-radius: 50%;*/
-  /*cursor: pointer;*/
-  /*-webkit-transition: all 100ms ease-in-out;*/
-  /*-moz-transition: all 100ms ease-in-out;*/
-  /*transition: width 100ms ease-in-out, height 100ms ease-in-out, margin-top 100ms ease-in-out, margin-left 100ms ease-in-out;*/
-}
-
-.k16, .k15, .k14{
+.k16,
+.k15,
+.k14 {
   position: absolute;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -156,15 +132,15 @@ h2 {
   color: white;
 }
 
-.k16{
-  
+.k16 {
   top: 10%;
 }
-.k15{
+
+.k15 {
   top: 30%;
 }
 
-.k14{
+.k14 {
   top: 50%;
 }
 
@@ -186,14 +162,8 @@ h2 {
   /*margin-top: -0.5rem;*/
   /*margin-left: -0.5rem;*/
 }
-/*NEED TO DO MORE RESEARCH: scroll window with fixed objects*/
-.experience{
- /*position: fixed;*/
- /*top: 20;*/
-}
 
-.position,
-.skill-block {
+.position {
   border-radius: 12px;
   width: 100%;
   background-color: white;
@@ -216,18 +186,41 @@ h2 {
   transition-delay: 0.2s;
 }
 
-.skill-block {
-  border-left: 7px solid #29d100;
-  color: #29d100;
-}
-.skill {
-  font-size:20px;
-}
-
 .description {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  margin-top:15px;
+  margin-top: 15px;
+}
+
+.skill-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skill-block {}
+
+.skill {
+  color: black;
+  margin-top: 3%;
+  padding: 1%;
+  
+}
+
+.skill h1,
+p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.skill h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+}
+
+.skill p, span {
+  margin: 0;
+  color: #ff5492;
 }
 
 @media (min-width: 640px) {}
@@ -359,6 +352,7 @@ h2 {
     top: 90%;
   }
 }
+
 
 /*Blink cursor*/
 
