@@ -1,2 +1,7 @@
 # porfolio
-Personal Portfolio as Software Engineer Career include projects source and contacts.
+Personal Portfolio as Software Engineer Career.
+
+## Cover Picture
+## Projects
+## Blog Links
+## Experience
