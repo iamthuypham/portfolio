@@ -49,6 +49,19 @@ h2 {
   align-items: stretch;
 }
 
+.black {
+  background-color: black;
+  color: white;
+}
+.pink {
+  background-color: #ff5492;
+  color: black;
+}
+.white {
+  background-color: white;
+  color: #ff5492;
+}
+
 @media (min-width: 640px) {
   section {
     font-size: 25px;

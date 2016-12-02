@@ -1,24 +1,23 @@
 .cover {
   background: linear-gradient( to bottom, rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.1), rgba(250, 250, 250, 0)), url(../assets/images/profile1.jpg) center right no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intro {
   color: black;
-  position: absolute;
-  top: 12%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .name {
   font-family: 'Open Sans', sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: bold;
-  color: #ff5492;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 .contact {
@@ -33,41 +32,59 @@
   color: #ff5492;
 }
 
+.me {
+  color: black;
+}
+
+.explore {
+  display: flex;
+  flex-direction: horizontal;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.explore .demo {
+  border-color: #ff5492;
+}
+
+.explore .source {
+  border-color: white;
+  color: black;
+}
+
+.explore div:hover {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
 @media (min-width: 640px) {
-  section {
-    font-size: 25px;
-  }
   .cover {
-    background-size: 350%;
+    padding-right: 20%;
   }
-  .intro {
-    top: 50%;
+  .name {
+    font-size: 70px;
+  }
+    .me {
+    color: #ff5492;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cover {
+    background: linear-gradient( to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../assets/images/profile1.jpg) center right no-repeat;
+    background-size: cover;
+    padding-right: 30%;
   }
   .name {
     font-size: 90px;
   }
 }
 
-@media (min-width: 1024px) {
-  section {
-    font-size: 30px;
-  }
-  .container {
-    max-width: 80%;
-  }
-  .cover {
-    background: linear-gradient( to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../assets/images/profile1.jpg) center right no-repeat;
-    background-size: cover;
-  }
-  .intro {
-    top: 40%;
-    width: 75%;
-  }
-  .name {
-    font-size: 90px;
-  }
-}
+
 /*Cursor style for type.js*/
+
 .typed-cursor {
   opacity: 1;
   -webkit-animation: blink 0.7s infinite;
@@ -76,7 +93,9 @@
   color: #ff1e87;
 }
 
+
 /*Blink cursor*/
+
 @keyframes blink {
   0% {
     opacity: 1;

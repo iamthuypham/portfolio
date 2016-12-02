@@ -3,20 +3,11 @@
   flex-direction: horizontal;
   justify-content: center;
 }
-.black {
-  background-color: black;
-  color: white;
-}
+
 .black .demo, .black .source {
   border-color: white;
 }
-.pink {
-  background-color: #ff5492;
-  color: black;
-}
-.white {
-  color: #ff5492;
-}
+
 .project-item p, a {
   font-size: 20px;
 }
