@@ -1,0 +1,73 @@
+/*Global Scope*/
+* {
+    color: white;
+}
+.center-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.btn {
+    font-size: 1.4em;
+    background-color: transparent;
+    color: white;
+    outline: 1px solid white;
+    border: none;
+    border-radius: 0;
+}
+.btn:hover {
+    background-color: white;
+    color: #336699;
+    outline: 1px solid white;
+}
+.main-btn {
+    outline: 1px dashed white;
+    box-shadow: 0 0 0 1px transparent;
+    animation: 1s animateBorder infinite;
+}
+.main-btn:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+h1, h3 {
+    margin-top: 10px;
+}
+
+/*General Info page*/
+.general-info {
+    background: url('./images/background.png') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.avatar {
+    /*border: 1px solid red;*/
+    height: 33.333%;
+}
+.avatar img {
+    height: 66.667%;
+    margin: 0 auto;
+    padding: 0;
+}
+.name {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+}
+.action {
+    position: absolute;
+    width: 100%;
+    top: 60%;
+    padding: 0 32%;
+}
+
+@keyframes animateBorder {
+    to {
+        outline: transparent;
+        box-shadow: 0 0 0 1px white;
+    }
+}
