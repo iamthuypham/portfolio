@@ -86,7 +86,7 @@ a {
     height: 25%;
     /*border: none;*/
     border: 1px solid white;
-    padding: 5%;
+    padding: 0 5%;
 }
 .portfolio .list-group-item h1 {
     padding: 0 2%;
@@ -98,7 +98,7 @@ a {
     background-color: red;
 }
 .list-group-item:hover {
-    padding: 7%;
+    padding: 0 7%;
     cursor: pointer;
     -webkit-transition: padding 0.5s; /* Safari */
     transition: padding 0.5s;
