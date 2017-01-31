@@ -91,12 +91,6 @@ a {
 .portfolio .list-group-item h1 {
     padding: 0 2%;
 }
-.portfolio .list-group-item div {
-    position: absolute;
-    bottom: 0;
-    height: 50px;
-    background-color: red;
-}
 .list-group-item:hover {
     padding: 0 7%;
     cursor: pointer;
