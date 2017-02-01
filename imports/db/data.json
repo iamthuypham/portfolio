@@ -3,11 +3,5 @@
         "name":"Thuy Pham",
         "avatar":"avatar.jpg",
         "title":"Web Developer"
-    },
-    "portfolio":{
-        "projects":"sample",
-        "experience":"sample",
-        "skills":"sample",
-        "testimony":"sample"
     }
 }

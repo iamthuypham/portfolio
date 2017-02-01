@@ -2,25 +2,20 @@ import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import Menu from './Menu.jsx'
 
-// import Menus from '../api/menus.js'
+//Styles
 import { ListGroup } from 'react-bootstrap';
+
+//Collections
+import { MenusCollection } from '../api/MenusCollection.js'
  
-// App component - represents the whole app
-export default class Portfolio extends Component {
-  getMenus() {
-    return [
-      {_id: 1, title: 'Projects', icon: 'rocket'},
-      {_id: 2, title: 'Experience', icon: 'th-list'},
-      {_id: 3, title: 'Skills', icon: 'code'},
-      {_id: 4, title: 'Testimony', icon: 'comment-o'}
-    ]
-  }
+class Portfolio extends Component {
   render() {
+    console.log(this.props.menus)
     return (
       <div className='portfolio'>
         <ListGroup>
-          { this.getMenus().map((menu) => (
-              <Menu key={menu._id} menu={menu} />
+          { this.props.menus.map((menu) => (
+              <Menu key={menu._id} menu={menu}/>
             ))
           }
         </ListGroup>
@@ -28,3 +23,12 @@ export default class Portfolio extends Component {
     )
   }
 }
+Portfolio.propTypes = {
+  menus: PropTypes.array.isRequired
+};
+ 
+export default createContainer(() => {
+  return {
+    menus: MenusCollection.find({}).fetch(),
+  };
+}, Portfolio);

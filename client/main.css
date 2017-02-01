@@ -81,26 +81,29 @@ a {
     height: 100%;
     margin: 0;
 }
-.list-group-item {
+button.list-group-item {
     background-color: transparent;
+    color: white;
     height: 25%;
     /*border: none;*/
     border: 1px solid white;
     padding: 0 5%;
 }
-.portfolio .list-group-item h1 {
+.portfolio button.list-group-item h1 {
     padding: 0 2%;
 }
-.list-group-item:hover {
+button.list-group-item:hover {
+    background-color: transparent;
+    color: white;
     padding: 0 7%;
     cursor: pointer;
     -webkit-transition: padding 0.5s; /* Safari */
     transition: padding 0.5s;
 }
-.list-group-item:hover:after {
+button.list-group-item:hover:after {
     opacity: 1;
 }
-.list-group-item:after {
+button.list-group-item:after {
     content: "";
     position: absolute;
     opacity: 0;
