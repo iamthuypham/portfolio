@@ -81,7 +81,7 @@ a {
     height: 100%;
     margin: 0;
 }
-button.list-group-item {
+button.list-group-item, button.list-group-item:focus {
     background-color: transparent;
     color: white;
     height: 25%;
@@ -118,10 +118,8 @@ button.list-group-item:after {
     -webkit-transition: opacity 0.5s; /* Safari */
     transition: opacity 0.5s;
 }
-
 button.selected {
-    background-color: yellow;
-    color: red;
+    height: 10%;
 }
 
 /* All animations */

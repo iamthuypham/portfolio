@@ -12,36 +12,36 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSelectedAnyMenu: false
+      userSelectAnyMenu: false,
+      selectedMenuId: ''
     }
   }
   selectThisMenu(id) {
     //Create a session for this selected menu
     Session.set('selectedMenu', id )
+    const selectedId = Session.get('selectedMenu')
     //Change state to reload each menu
     this.setState({
-      userSelectedAnyMenu: true
+      userSelectAnyMenu: true,
+      selectedMenuId: selectedId
     })
   }
   render() {
-    // by default, all menus will be showed
-    let showedMenus = this.props.menus;
-    let hiddenMenus
-    // after selecting a menu, showedMenus will be the selected menu
-    const selectedMenuId = Session.get('selectedMenu')
-    if (this.state.userSelectedAnyMenu) {
-      hiddenMenus = showedMenus.filter((menu) => menu._id !== selectedMenuId)
-      showedMenus = showedMenus.filter((menu) => menu._id === selectedMenuId)
+    let showedMenu = this.props.menus
+    let newClass
+    console.log(this.state.selectedMenuId)
+    if (this.state.userSelectAnyMenu) {
+      showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
     }
     return (
       <div className='portfolio'>
         <ListGroup>
-          { showedMenus.map((menu) => (
+          { showedMenu.map((menu) => (
             <Menu 
               key={menu._id} 
               menu={menu} 
-              onClick={this.selectThisMenu.bind(this, menu._id)} 
-              selected={this.state.userSelectedAnyMenu}
+              Click={this.selectThisMenu.bind(this, menu._id)} 
+              userSelectAnyMenu={this.state.userSelectAnyMenu}
             />
           ))
           }
