@@ -119,6 +119,11 @@ button.list-group-item:after {
     transition: opacity 0.5s;
 }
 
+button.selected {
+    background-color: yellow;
+    color: red;
+}
+
 /* All animations */
 @keyframes animateBorder {
     to {
