@@ -13,7 +13,8 @@ export default class Menu extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSelectAnyMenu: false
+      userSelectAnyMenu: this.props.userSelectAnyMenu,
+      userSelectHiddenMenu: this.props.userSelectHiddenMenu
     }
   }
   componentWillReceiveProps(newProps) {
@@ -23,7 +24,13 @@ export default class Menu extends Component {
       this.setState({newStyle: selectedMenuStyle});
     }
   }
-  
+  componentDidMount(){
+    if (this.state.userSelectAnyMenu === false) {
+      this.setState({newStyle: null});
+    } else {
+      this.setState({newStyle: selectedMenuStyle});
+    }
+  }
   render() {
     return (
       <ListGroupItem className='left-middle' style={this.state.newStyle} onClick={this.props.Click} >

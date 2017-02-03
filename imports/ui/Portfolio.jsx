@@ -15,7 +15,7 @@ class Portfolio extends Component {
     super(props);
     this.state = {
       userSelectAnyMenu: false,
-      selectedMenuId: ''
+      selectedMenuId: '',
     }
   }
   selectThisMenu(id) {
@@ -46,6 +46,7 @@ class Portfolio extends Component {
               menu={menu} 
               Click={this.selectThisMenu.bind(this, menu._id)} 
               userSelectAnyMenu={this.state.userSelectAnyMenu}
+              userSelectHiddenMenu={this.state.userSelectHiddenMenu}
             />
           ))
           }

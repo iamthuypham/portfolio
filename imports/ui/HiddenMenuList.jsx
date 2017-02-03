@@ -31,11 +31,17 @@ export default class HiddenMenuList extends Component {
     })
   }
   componentWillReceiveProps(newProps) {
-    if (newProps.userSelectAnyMenu === false && !this.state.userSelectHiddenMenuList) {
+    if (newProps.userSelectAnyMenu === false) {
       this.setState({revealBarsButton: null});
     } else {
       this.setState({revealBarsButton: presentBarsButtonStyle});
     }
+  }
+  onToggle(id){
+    this.setState({
+      userSelectHiddenMenuList: false
+    })
+    this.props.Click(id)
   }
   render() {
     return (
@@ -47,7 +53,7 @@ export default class HiddenMenuList extends Component {
               <HiddenMenu 
                 key={menu._id} 
                 menu={menu}
-                Click={this.props.Click.bind(this, menu._id)}
+                Click={this.onToggle.bind(this, menu._id)}
               />
             ))
            }
