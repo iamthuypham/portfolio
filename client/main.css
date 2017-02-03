@@ -7,6 +7,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 .left-middle {
     display: flex;
@@ -159,6 +160,7 @@ button.selected {
     /*box-shadow: 0 1px 0 #777;*/
 }
 .tryNowButton:hover {
+    outline: none;
     color: white;
     background-color: #FF55A3;
     right: 4%;
@@ -167,24 +169,34 @@ button.selected {
 }
 
 .hiddenMenuList {
-    position: absolute;
+    /*display: none;*/
+    opacity: 1;
+    position: fixed;
     bottom: 0;
     right: 0;
-    margin: 5%;
+    margin-right: 3vh;
+    margin-bottom: -8vh;
+    overflow: hidden
 }
 .hiddenMenuList .barsButton, .hiddenMenuList .hiddenMenuButton {
-    display: none;
-    background-color: #999;
+    background-color: #369;
     outline: none;
     border-radius: 50%;
     width: 7vh;
     height: 7vh;
     padding: 0;
 }
-.hiddenMenuList .list-group {
-    /*display: none;*/
+.hiddenMenuList .hiddenMenu {
+    border: none;
+    padding: 0;
+    margin-bottom: 1vh;
 }
-
+.hiddenMenuList .barsButton:focus {
+    background-color: #369;
+}
+.hiddenMenuList .icon {
+    font-size: 3vh;
+}
 /* All animations */
 @keyframes animateBorder {
     to {

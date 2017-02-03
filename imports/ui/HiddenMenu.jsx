@@ -3,23 +3,37 @@ import FontAwesome from 'react-fontawesome'
 
 import { ListGroupItem, Button } from 'react-bootstrap';
 
+const presentHiddenButtonStyle = {
+  display: 'block'
+  // marginBottom: '3vh',
+  // WebkistTransition: 'all 2s', /* Safari */
+  // transition: 'all 2s',
+}
+
 export default class HiddenMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userSelectAnyMenu: false,
-    }
-  }
-  componentDidMount() {
-    this.setState({
-      userSelectProjectMenu: true
-    })
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     userSelectHiddenMenuList: false,
+  //   }
+  // }
+  // componentDidMount() {
+  //   this.setState({
+  //     userSelectHiddenMenuList: true
+  //   })
+  // }
+  // componentWillReceiveProps(newProps) {
+  //   if (newProps.userSelectHiddenMenuList === false) {
+  //     this.setState({newStyle: null});
+  //   } else {
+  //     this.setState({newStyle: presentHiddenButtonStyle});
+  //   }
+  // }
   render() {
     return (
-      <ListGroupItem className='hiddenMenu' style={this.state.newStyle}>
-        <Button className='hiddenMenuButton'>
-          <h3><FontAwesome name='rocket' /></h3>
+      <ListGroupItem className='hiddenMenu'>
+        <Button className='hiddenMenuButton' onClick={this.props.Click}>
+          <FontAwesome name={this.props.menu.icon} className='icon'/>
         </Button>
       </ListGroupItem>
     )
@@ -27,5 +41,5 @@ export default class HiddenMenu extends Component {
 }
 
 HiddenMenu.propTypes = {
-  userSelectAnyMenu: PropTypes.bool.isRequired,
+  // userSelectHiddenMenuList: PropTypes.bool.isRequired,
 };

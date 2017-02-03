@@ -6,53 +6,69 @@ import { ListGroup, Button } from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome'
 
 const presentBarsButtonStyle = {
-  display: 'block',
+  marginBottom: '3vh',
+  WebkistTransition: 'all 1.5s', /* Safari */
+  transition: 'all 1.5s',
+}
+
+const presentHiddenMenuListStyle = {
+  // marginBottom: '3vh',
+  display: 'block'
+  // WebkistTransition: 'all 1.5s', /* Safari */
+  // transition: 'all 1.5s',
 }
 
 export default class HiddenMenuList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSelectAnyMenu: false
+      userSelectAnyMenu: false,
+      userSelectHiddenMenuList: false
     }
+  }
+  userSelectHiddenMenuList(){
+    this.setState({
+      userSelectHiddenMenuList: !this.state.userSelectHiddenMenuList
+    })
   }
   componentDidMount() {
     this.setState({
-      userSelectAnyMenu: true
+      userSelectAnyMenu: true,
       })
   }
   componentWillReceiveProps(newProps) {
     if (newProps.userSelectAnyMenu === false) {
-      this.setState({newStyle: null});
+      this.setState({revealBarsButton: null});
     } else {
-      this.setState({newStyle: presentBarsButtonStyle});
+      this.setState({revealBarsButton: presentBarsButtonStyle});
     }
   }
-  
   render() {
     return (
-      <div className='hiddenMenuList' >
-        <Button className='barsButton' style={this.state.newStyle}>
-          <h3><FontAwesome name='bars' /></h3>
-        </Button>
-        <ListGroup>
-          { this.props.hiddenMenuList ? (
-            this.props.hiddenMenuList.map((menu) => (
+      <div className='hiddenMenuList' style={this.state.revealBarsButton}>
+        { 
+        this.state.userSelectHiddenMenuList && this.props.hiddenMenuList ? (
+          <ListGroup>
+           {  this.props.hiddenMenuList.map((menu) => (
               <HiddenMenu 
                 key={menu._id} 
-                menu={menu} 
-                // Click={this.selectThisMenu.bind(this, menu._id)} 
-                userSelectAnyMenu={this.state.userSelectAnyMenu}
+                menu={menu}
+                Click={this.props.Click}
               />
             ))
+           }
+          </ListGroup>
            ) : ('')
-          }
-        </ListGroup>
+        }
+        <Button className='barsButton center-middle' onClick={this.userSelectHiddenMenuList.bind(this)}>
+          <FontAwesome name='bars' className='icon'/>
+        </Button>
       </div>
     )
   }
 }
 
-HiddenMenu.propTypes = {
+HiddenMenuList.propTypes = {
   userSelectAnyMenu: PropTypes.bool.isRequired,
+  hiddenMenuList: PropTypes.array
 };

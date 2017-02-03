@@ -34,8 +34,8 @@ class Portfolio extends Component {
     let newClass
     console.log(this.state.selectedMenuId)
     if (this.state.userSelectAnyMenu) {
-      showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
       hiddenMenuList = showedMenu.filter((menu) => menu._id !== this.state.selectedMenuId )
+      showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
     }
     return (
       <div className='portfolio'>
@@ -51,7 +51,10 @@ class Portfolio extends Component {
           }
         </ListGroup>
         <Dashboard userSelectAnyMenu={this.state.userSelectAnyMenu} />
-        <HiddenMenuList userSelectAnyMenu={this.state.userSelectAnyMenu} hiddenMenuList={hiddenMenuList}/>
+        <HiddenMenuList 
+          userSelectAnyMenu={this.state.userSelectAnyMenu} 
+          hiddenMenuList={hiddenMenuList}
+        />
       </div>
     )
   }
