@@ -78,32 +78,38 @@ a {
 
 /*Portfolio page*/
 .list-group {
-    height: 100%;
     margin: 0;
 }
 button.list-group-item, button.list-group-item:focus {
     background-color: transparent;
     color: white;
-    height: 25%;
+    height: 25vh;
     /*border: none;*/
     border: 1px solid white;
+    outline-color: white;
     padding: 0 5%;
+    -webkit-transition: padding 0.5s; /* Safari */
+    transition: padding 0.5s;
 }
-.portfolio button.list-group-item h1 {
+.portfolio button.list-group-item h2:nth-child(2) {
     padding: 0 2%;
+    /*margin: 0;*/
 }
 button.list-group-item:hover {
     background-color: transparent;
     color: white;
-    padding: 0 7%;
+    padding: 0 6%;
     cursor: pointer;
-    -webkit-transition: padding 0.5s; /* Safari */
-    transition: padding 0.5s;
+    /*-webkit-transition: padding 0.5s; */
+    /* Safari */
+    /*transition: padding 0.5s;*/
 }
 button.list-group-item:hover:after {
+    display: block;
     opacity: 1;
 }
-button.list-group-item:after {
+button.list-group-item:after, button.list-group-item:focus:after {
+    display: none;
     content: "";
     position: absolute;
     opacity: 0;
@@ -120,6 +126,63 @@ button.list-group-item:after {
 }
 button.selected {
     height: 10%;
+}
+
+.dashboard {
+    height: 90vh;
+    background-color: white;
+    display: none;
+    padding: 4% 5%;
+}
+.dashboard h4, .dashboard p, .modal-title {
+    color: black;
+}
+.media {
+    padding: 2% 0 2% 3%;
+    border: 1px solid #999;
+    box-shadow: 0 1px 0 #777;
+    border-radius: 7px;
+    margin: 0 0 3% 0;
+    /*background-color: #F9FBF2;*/
+}
+.media-right {
+    width: 12%;
+}
+.tryNowButton {
+    font-size: 14px;
+    background-color: #999;
+    color: white;
+    position:absolute;
+    right: 4.5%;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    /*box-shadow: 0 1px 0 #777;*/
+}
+.tryNowButton:hover {
+    color: white;
+    background-color: #FF55A3;
+    right: 4%;
+    -webkit-transition: right 0.3s;
+    transition: right 0.3s;
+}
+
+.hiddenMenuList {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5%;
+}
+.hiddenMenuList .barsButton, .hiddenMenuList .hiddenMenuButton {
+    display: none;
+    background-color: #999;
+    outline: none;
+    border-radius: 50%;
+    width: 7vh;
+    height: 7vh;
+    padding: 0;
+}
+.hiddenMenuList .list-group {
+    /*display: none;*/
 }
 
 /* All animations */

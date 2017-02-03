@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
-import Menu from './Menu.jsx'
+import ShowedMenu from './ShowedMenu.jsx'
+import Dashboard from './Dashboard.jsx'
+import HiddenMenuList from './HiddenMenuList.jsx'
 
 //Styles
 import { ListGroup } from 'react-bootstrap';
@@ -28,16 +30,18 @@ class Portfolio extends Component {
   }
   render() {
     let showedMenu = this.props.menus
+    let hiddenMenuList = null
     let newClass
     console.log(this.state.selectedMenuId)
     if (this.state.userSelectAnyMenu) {
       showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
+      hiddenMenuList = showedMenu.filter((menu) => menu._id !== this.state.selectedMenuId )
     }
     return (
       <div className='portfolio'>
         <ListGroup>
           { showedMenu.map((menu) => (
-            <Menu 
+            <ShowedMenu 
               key={menu._id} 
               menu={menu} 
               Click={this.selectThisMenu.bind(this, menu._id)} 
@@ -46,6 +50,8 @@ class Portfolio extends Component {
           ))
           }
         </ListGroup>
+        <Dashboard userSelectAnyMenu={this.state.userSelectAnyMenu} />
+        <HiddenMenuList userSelectAnyMenu={this.state.userSelectAnyMenu} hiddenMenuList={hiddenMenuList}/>
       </div>
     )
   }

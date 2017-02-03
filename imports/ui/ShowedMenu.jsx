@@ -4,9 +4,9 @@ import FontAwesome from 'react-fontawesome'
 import { ListGroupItem } from 'react-bootstrap';
 
 const selectedMenuStyle = {
-  height: '10%',
-  WebkistTransition: 'height 0.5s', /* Safari */
-  transition: 'height 0.5s',
+  height: '10vh',
+  WebkistTransition: 'all 0.5s', /* Safari */
+  transition: 'all 0.5s',
 }
 
 export default class Menu extends Component {
@@ -27,8 +27,8 @@ export default class Menu extends Component {
   render() {
     return (
       <ListGroupItem className='left-middle' style={this.state.newStyle} onClick={this.props.Click} >
-        <h1><FontAwesome name={this.props.menu.icon} /></h1>
-        <h1>{this.props.menu.title}</h1>
+        <h3><FontAwesome name={this.props.menu.icon} /></h3>
+        <h2>{this.props.menu.title}</h2>
       </ListGroupItem>
     )
   }
