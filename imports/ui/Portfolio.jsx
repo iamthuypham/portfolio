@@ -54,6 +54,7 @@ class Portfolio extends Component {
         <HiddenMenuList 
           userSelectAnyMenu={this.state.userSelectAnyMenu} 
           hiddenMenuList={hiddenMenuList}
+          Click={this.selectThisMenu.bind(this)}
         />
       </div>
     )

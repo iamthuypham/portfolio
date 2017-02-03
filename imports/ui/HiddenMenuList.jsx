@@ -22,7 +22,6 @@ export default class HiddenMenuList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSelectAnyMenu: false,
       userSelectHiddenMenuList: false
     }
   }
@@ -31,13 +30,8 @@ export default class HiddenMenuList extends Component {
       userSelectHiddenMenuList: !this.state.userSelectHiddenMenuList
     })
   }
-  componentDidMount() {
-    this.setState({
-      userSelectAnyMenu: true,
-      })
-  }
   componentWillReceiveProps(newProps) {
-    if (newProps.userSelectAnyMenu === false) {
+    if (newProps.userSelectAnyMenu === false && !this.state.userSelectHiddenMenuList) {
       this.setState({revealBarsButton: null});
     } else {
       this.setState({revealBarsButton: presentBarsButtonStyle});
@@ -53,7 +47,7 @@ export default class HiddenMenuList extends Component {
               <HiddenMenu 
                 key={menu._id} 
                 menu={menu}
-                Click={this.props.Click}
+                Click={this.props.Click.bind(this, menu._id)}
               />
             ))
            }
