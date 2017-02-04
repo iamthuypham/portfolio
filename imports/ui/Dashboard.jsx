@@ -4,7 +4,8 @@ import { createContainer } from 'meteor/react-meteor-data';
 //Components
 import Project from './Project.jsx'
 import Experience from './Experience.jsx'
-import Skill from './Skills.jsx'
+import Skill from './Skill.jsx'
+import Testimony from './Testimony.jsx'
 
 //Styles
 import { ListGroup } from 'react-bootstrap';
@@ -14,6 +15,7 @@ import FontAwesome from 'react-fontawesome'
 import { ProjectsCollection } from '../api/ProjectsCollection'
 import { ExperienceCollection } from '../api/ExperienceCollection'
 import { SkillsCollection } from '../api/SkillsCollection'
+import { TestimonyCollection } from '../api/TestimonyCollection'
 
 const presentDashboardStyle = {
   display: 'block'
@@ -56,7 +58,10 @@ class Dashboard extends Component {
         Result = Skill
         results = this.props.skills
         break
-      
+      case 'Testimony':
+        Result = Testimony
+        results = this.props.testimony
+        break
       }
     }
     return (
@@ -78,13 +83,15 @@ Dashboard.propTypes = {
   userSelectAnyMenu: PropTypes.bool.isRequired,
   projects: PropTypes.array.isRequired,
   experience: PropTypes.array.isRequired,
-  skills: PropTypes.array.isRequired
+  skills: PropTypes.array.isRequired,
+  testimony: PropTypes.array.isRequired
 };
  
 export default createContainer(() => {
   return {
     projects: ProjectsCollection.find({}).fetch(),
     experience: ExperienceCollection.find({}).fetch(),
-    skills: SkillsCollection.find({}).fetch()
+    skills: SkillsCollection.find({}).fetch(),
+    testimony: TestimonyCollection.find({}).fetch()
   };
 }, Dashboard);

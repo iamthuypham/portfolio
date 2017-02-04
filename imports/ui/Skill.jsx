@@ -3,13 +3,13 @@ import FontAwesome from 'react-fontawesome'
 
 import { Row, Col } from 'react-bootstrap';
 
-export default class Skills extends Component {
+export default class Skill extends Component {
   constructor(props) {
     super(props);
   }
   render() {
     return (
-      <Row className='experience'>
+      <Row className='skill'>
         <Col xs={8}>
           <h2>{this.props.result.area}</h2>
             {this.props.result.breakdown.map((e) => {
@@ -25,7 +25,7 @@ export default class Skills extends Component {
   }
 }
 
-Skills.propTypes = {
+Skill.propTypes = {
   result: PropTypes.object.isRequired,
   // userSelectProjectMenu: PropTypes.bool.isRequired
 };
