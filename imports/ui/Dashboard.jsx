@@ -35,16 +35,30 @@ class Dashboard extends Component {
   }
   
   render() {
+    let Result
+    let results
+    if (this.props.userSelectAnyMenu) {
+    switch (this.props.menu.title) {
+      case 'Projects':
+        Result = Project
+        results = this.props.projects
+        break
+      case 'Experience':
+        Result = Experience
+        results = this.props.projects
+        break
+      }
+    }
     return (
       <div className='dashboard' style={this.state.newStyle}>
-        { this.props.results.map((result) => (
-          <Project
+        { this.props.userSelectAnyMenu ? (results.map((result) => (
+          <Result
             key={result._id} 
             project={result} 
-            // userSelectProjectMenu={this.state.userSelectAnyMenu}
-            // Click={this.selectThisMenu.bind(this, project._id)} 
           />
-        ))}
+        ))):('')
+          
+        }
       </div>
     )
   }

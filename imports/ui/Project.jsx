@@ -7,14 +7,8 @@ export default class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userSelectProjectMenu: false,
       userSelectModal: false
     }
-  }
-  componentDidMount() {
-    this.setState({
-      userSelectProjectMenu: true
-    })
   }
   openModal() {
     this.setState({ userSelectModal: true });

@@ -32,7 +32,6 @@ class Portfolio extends Component {
     let showedMenu = this.props.menus
     let hiddenMenuList = null
     let newClass
-    console.log(this.state.selectedMenuId)
     if (this.state.userSelectAnyMenu) {
       hiddenMenuList = showedMenu.filter((menu) => menu._id !== this.state.selectedMenuId )
       showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
