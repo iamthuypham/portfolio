@@ -36,11 +36,11 @@ class Dashboard extends Component {
   render() {
     return (
       <div className='dashboard' style={this.state.newStyle}>
-        { this.props.projects.map((project) => (
+        { this.props.results.map((result) => (
           <Project
-            key={project._id} 
-            project={project} 
-            userSelectProjectMenu={this.state.userSelectAnyMenu}
+            key={result._id} 
+            project={result} 
+            // userSelectProjectMenu={this.state.userSelectAnyMenu}
             // Click={this.selectThisMenu.bind(this, project._id)} 
           />
         ))}

@@ -25,6 +25,7 @@ export default class Menu extends Component {
   render() {
     return (
       <Media onClick={this.openModal.bind(this)}>
+      <h1>Experience Page</h1>
         <Media.Left>
           <img width={64} height={64} src="" alt="Image"/>
         </Media.Left>

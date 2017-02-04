@@ -51,7 +51,10 @@ class Portfolio extends Component {
           ))
           }
         </ListGroup>
-        <Dashboard userSelectAnyMenu={this.state.userSelectAnyMenu} />
+        <Dashboard 
+          userSelectAnyMenu={this.state.userSelectAnyMenu} 
+          menu={showedMenu[0]}
+          />
         <HiddenMenuList 
           userSelectAnyMenu={this.state.userSelectAnyMenu} 
           hiddenMenuList={hiddenMenuList}
