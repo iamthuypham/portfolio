@@ -9,6 +9,7 @@ import FontAwesome from 'react-fontawesome'
 
 //Collections
 import { ProjectsCollection } from '../api/ProjectsCollection'
+import { ExperienceCollection } from '../api/ExperienceCollection'
 
 const presentDashboardStyle = {
   display: 'block'
@@ -45,7 +46,7 @@ class Dashboard extends Component {
         break
       case 'Experience':
         Result = Experience
-        results = this.props.projects
+        results = this.props.experience
         break
       }
     }
@@ -54,7 +55,7 @@ class Dashboard extends Component {
         { this.props.userSelectAnyMenu ? (results.map((result) => (
           <Result
             key={result._id} 
-            project={result} 
+            result={result}
           />
         ))):('')
           
@@ -66,11 +67,13 @@ class Dashboard extends Component {
 
 Dashboard.propTypes = {
   userSelectAnyMenu: PropTypes.bool.isRequired,
-  projects: PropTypes.array.isRequired
+  projects: PropTypes.array.isRequired,
+  experience: PropTypes.array.isRequired
 };
  
 export default createContainer(() => {
   return {
     projects: ProjectsCollection.find({}).fetch(),
+    experience: ExperienceCollection.find({}).fetch()
   };
 }, Dashboard);

@@ -135,10 +135,10 @@ button.selected {
     display: none;
     padding: 4% 5%;
 }
-.dashboard h4, .dashboard p, .modal-title {
+.dashboard h4, .dashboard p, .modal-title, .dashboard div {
     color: black;
 }
-.media {
+.project .media {
     padding: 2% 0 2% 3%;
     border: 1px solid #999;
     box-shadow: 0 1px 0 #777;
@@ -146,10 +146,10 @@ button.selected {
     margin: 0 0 3% 0;
     /*background-color: #F9FBF2;*/
 }
-.media-right {
+.project .media-right {
     width: 12%;
 }
-.tryNowButton {
+.project .tryNowButton {
     font-size: 14px;
     background-color: #999;
     color: white;
@@ -159,7 +159,7 @@ button.selected {
     border-bottom-left-radius: 7px;
     /*box-shadow: 0 1px 0 #777;*/
 }
-.tryNowButton:hover {
+.project .tryNowButton:hover {
     outline: none;
     color: white;
     background-color: #FF55A3;
@@ -168,6 +168,13 @@ button.selected {
     transition: right 0.3s;
 }
 
+.experience year {
+    font-size: 4em;
+    font-weight: bold;
+    color: #999;
+}
+
+/* Hidden Menu Style */
 .hiddenMenuList {
     /*display: none;*/
     opacity: 1;

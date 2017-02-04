@@ -1,6 +1,7 @@
-import { Meteor } from 'meteor/meteor';
+import { Meteor } from 'meteor/meteor'
 import '../imports/api/MenusCollection.js'
-import '../imports/api/ProjectsCollection.js';
+import '../imports/api/ProjectsCollection.js'
+import '../imports/api/ExperienceCollection.js'
 
 Meteor.startup(() => {
   // code to run on server at startup
