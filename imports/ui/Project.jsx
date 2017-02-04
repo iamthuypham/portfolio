@@ -3,7 +3,7 @@ import FontAwesome from 'react-fontawesome'
 
 import { Media, Button, Modal } from 'react-bootstrap';
 
-export default class Menu extends Component {
+export default class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -45,7 +45,7 @@ export default class Menu extends Component {
   }
 }
 
-Menu.propTypes = {
+Project.propTypes = {
   project: PropTypes.object.isRequired,
   // userSelectProjectMenu: PropTypes.bool.isRequired
 };

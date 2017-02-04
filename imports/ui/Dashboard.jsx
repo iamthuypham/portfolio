@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import Project from './Project.jsx'
+import Experience from './Experience.jsx'
 
 //Styles
 import { ListGroup } from 'react-bootstrap';
