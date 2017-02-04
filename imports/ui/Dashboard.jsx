@@ -1,7 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
+
+//Components
 import Project from './Project.jsx'
 import Experience from './Experience.jsx'
+import Skill from './Skills.jsx'
 
 //Styles
 import { ListGroup } from 'react-bootstrap';
@@ -10,6 +13,7 @@ import FontAwesome from 'react-fontawesome'
 //Collections
 import { ProjectsCollection } from '../api/ProjectsCollection'
 import { ExperienceCollection } from '../api/ExperienceCollection'
+import { SkillsCollection } from '../api/SkillsCollection'
 
 const presentDashboardStyle = {
   display: 'block'
@@ -48,6 +52,11 @@ class Dashboard extends Component {
         Result = Experience
         results = this.props.experience
         break
+      case 'Skills':
+        Result = Skill
+        results = this.props.skills
+        break
+      
       }
     }
     return (
@@ -68,12 +77,14 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
   userSelectAnyMenu: PropTypes.bool.isRequired,
   projects: PropTypes.array.isRequired,
-  experience: PropTypes.array.isRequired
+  experience: PropTypes.array.isRequired,
+  skills: PropTypes.array.isRequired
 };
  
 export default createContainer(() => {
   return {
     projects: ProjectsCollection.find({}).fetch(),
-    experience: ExperienceCollection.find({}).fetch()
+    experience: ExperienceCollection.find({}).fetch(),
+    skills: SkillsCollection.find({}).fetch()
   };
 }, Dashboard);
