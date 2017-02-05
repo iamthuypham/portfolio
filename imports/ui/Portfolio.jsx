@@ -50,10 +50,13 @@ class Portfolio extends Component {
           ))
           }
         </ListGroup>
-        <Dashboard 
-          userSelectAnyMenu={this.state.userSelectAnyMenu} 
-          menu={showedMenu[0]}
+        { showedMenu.map((menu) => (
+          <Dashboard 
+            userSelectAnyMenu={this.state.userSelectAnyMenu} 
+            key={menu._id} 
+            menu={menu}
           />
+        ))}
         <HiddenMenuList 
           userSelectAnyMenu={this.state.userSelectAnyMenu} 
           hiddenMenuList={hiddenMenuList}
