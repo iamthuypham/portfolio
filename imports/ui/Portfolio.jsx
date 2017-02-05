@@ -22,7 +22,6 @@ class Portfolio extends Component {
     //Create a session for this selected menu
     Session.set('selectedMenu', id )
     const selectedId = Session.get('selectedMenu')
-    console.log('Selected Id is ?' + selectedId)
     //Change state to reload each menu
     this.setState({
       userSelectAnyMenu: true,
@@ -32,8 +31,8 @@ class Portfolio extends Component {
   render() {
     let showedMenu = this.props.menus
     let hiddenMenuList = null
-    let newClass
     if (this.state.userSelectAnyMenu) {
+      console.log('Rendering: ...' + this.state.selectedMenuId)
       hiddenMenuList = showedMenu.filter((menu) => menu._id !== this.state.selectedMenuId )
       showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
     }
