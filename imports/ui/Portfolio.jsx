@@ -33,7 +33,10 @@ class Portfolio extends Component {
     let hiddenMenuList = null
     if (this.state.userSelectAnyMenu) {
       console.log('Rendering: ...' + this.state.selectedMenuId)
-      hiddenMenuList = showedMenu.filter((menu) => menu._id !== this.state.selectedMenuId )
+      hiddenMenuList = showedMenu.filter(function(menu) { 
+        console.log('Menu Id:' + menu._id)
+        console.log('Selected Id:' + this.state.selectedMenuId)
+        menu._id !== this.state.selectedMenuId } )
       console.log(hiddenMenuList)
       showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
       console.log(showedMenu)
