@@ -22,6 +22,7 @@ class Portfolio extends Component {
     //Create a session for this selected menu
     Session.set('selectedMenu', id )
     const selectedId = Session.get('selectedMenu')
+    console.log('Selected Id is ?' + selectedId)
     //Change state to reload each menu
     this.setState({
       userSelectAnyMenu: true,
