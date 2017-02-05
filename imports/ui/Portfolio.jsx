@@ -34,17 +34,21 @@ class Portfolio extends Component {
     if (this.state.userSelectAnyMenu) {
       const selectedMenuId = this.state.selectedMenuId
       
-      function filterMenuById(menu) {
+      function filterHiddenMenuById(menu) {
         if (menu._id._str !== selectedMenuId._str) {
-          console.log(menu._id)
-          console.log(selectedMenuId)
           return menu
         }
       }
-      hiddenMenuList = showedMenu.filter(filterMenuById)
+      function filterShowedMenuById(menu) {
+        if (menu._id._str === selectedMenuId._str) {
+          return menu
+        }
+      }
+      hiddenMenuList = showedMenu.filter(filterHiddenMenuById)
       
       console.log(hiddenMenuList)
-      showedMenu = showedMenu.filter((menu) => menu._id === this.state.selectedMenuId )
+      
+      showedMenu = showedMenu.filter(filterShowedMenuById)
       
       console.log(showedMenu)
     }
