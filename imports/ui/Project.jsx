@@ -40,5 +40,5 @@ export default class Project extends Component {
 }
 
 Project.propTypes = {
-  result: PropTypes.object.isRequired,
+  result: PropTypes.object.isRequired
 };
