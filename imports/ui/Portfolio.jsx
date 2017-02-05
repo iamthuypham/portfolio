@@ -72,10 +72,3 @@ export default createContainer(() => {
     menus: MenusCollection.find({}).fetch(),
   };
 }, Portfolio);
-
-    // let showedMenu = this.props.menus
-    // let hiddenMenu
-    // if (this.state.status === 'SHOW SELECTED'){
-    //   showedMenu = this.props.menus.filter(menu => menu.selected)
-    //   hiddenMenu = this.props.menus.filter(menu => !menu.selected)
-    // }
