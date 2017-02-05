@@ -8,7 +8,7 @@ export default class Project extends Component {
     super(props);
   }
   render() {
-    console.log("This is undefined ? " + this.props.result.title)
+    console.log("This is undefined ? " + this.props.result)
     return (
       <Row className='experience'>
         <Col xs={8}>

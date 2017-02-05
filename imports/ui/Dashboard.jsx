@@ -45,7 +45,7 @@ class Dashboard extends Component {
     let Result
     let results
     if (this.props.userSelectAnyMenu) {
-      console.log("This is undefined ? " + this.props.menu.title)
+      console.log("This is undefined ? " + this.props.menu)
     switch (this.props.menu.title) {
       case 'Projects':
         Result = Project
