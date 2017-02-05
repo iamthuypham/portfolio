@@ -36,6 +36,8 @@ class Portfolio extends Component {
       
       function filterMenuById(menu) {
         if (menu._id !== selectedMenuId) {
+          console.log(menu._id)
+          console.log(selectedMenuId)
           console.log(menu)
           return menu
         }
