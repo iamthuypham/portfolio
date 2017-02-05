@@ -41,5 +41,4 @@ export default class Project extends Component {
 
 Project.propTypes = {
   result: PropTypes.object.isRequired,
-  // userSelectProjectMenu: PropTypes.bool.isRequired
 };
