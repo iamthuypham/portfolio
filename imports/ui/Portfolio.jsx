@@ -20,12 +20,12 @@ class Portfolio extends Component {
   }
   selectThisMenu(id) {
     //Create a session for this selected menu
-    Session.set('selectedMenu', id )
-    const selectedId = Session.get('selectedMenu')
+    Session.set('selectedMenu', id._str )
+    const selectedIdStr = Session.get('selectedMenu')
     //Change state to reload each menu
     this.setState({
       userSelectAnyMenu: true,
-      selectedMenuId: selectedId
+      selectedMenuId: selectedIdStr
     })
   }
   render() {
@@ -34,10 +34,10 @@ class Portfolio extends Component {
     if (this.state.userSelectAnyMenu) {
       const selectedMenuId = this.state.selectedMenuId
     
-      hiddenMenuList = showedMenu.filter((menu) => menu._id._str === selectedMenuId._str )
+      hiddenMenuList = showedMenu.filter((menu) => menu._id._str === selectedMenuId )
       
       console.log(hiddenMenuList)
-      showedMenu = showedMenu.filter((menu) => menu._id._str === selectedMenuId._str )
+      showedMenu = showedMenu.filter((menu) => menu._id._str === selectedMenuId )
       
       console.log(showedMenu)
     }
@@ -55,13 +55,10 @@ class Portfolio extends Component {
           ))
           }
         </ListGroup>
-        { showedMenu.map((menu) => (
-          <Dashboard 
-            userSelectAnyMenu={this.state.userSelectAnyMenu} 
-            key={menu._id} 
-            menu={menu}
-          />
-        ))}
+        <Dashboard 
+          userSelectAnyMenu={this.state.userSelectAnyMenu} 
+          menu={showedMenu[0]}
+        />
         <HiddenMenuList 
           userSelectAnyMenu={this.state.userSelectAnyMenu} 
           hiddenMenuList={hiddenMenuList}
