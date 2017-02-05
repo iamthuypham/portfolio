@@ -35,10 +35,9 @@ class Portfolio extends Component {
       const selectedMenuId = this.state.selectedMenuId
       
       function filterMenuById(menu) {
-        if (menu._id !== selectedMenuId) {
+        if (menu._id._str !== selectedMenuId._str) {
           console.log(menu._id)
           console.log(selectedMenuId)
-          console.log(menu)
           return menu
         }
       }
