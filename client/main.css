@@ -121,7 +121,7 @@ button.list-group-item:after, button.list-group-item:focus:after {
     top: 0;
     left: 0;
     /* overlay styles */
-    background: linear-gradient(-135deg, rgba(255,255,255,0.33) 0%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(-135deg, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 100%);
     -webkit-transition: opacity 0.5s; /* Safari */
     transition: opacity 0.5s;
 }
@@ -138,13 +138,11 @@ button.selected {
 .dashboard h4, .dashboard p, .modal-title, .dashboard div {
     color: black;
 }
-.project .media {
-    padding: 2% 0 2% 3%;
-    border: 1px solid #999;
-    box-shadow: 0 1px 0 #777;
-    border-radius: 7px;
-    margin: 0 0 3% 0;
-    /*background-color: #F9FBF2;*/
+.project .thumbnail {
+    border: none;;
+}
+.project .thumbnail img {
+    padding: 5% 20%;
 }
 .project .media-right {
     width: 12%;
@@ -167,13 +165,66 @@ button.selected {
     -webkit-transition: right 0.3s;
     transition: right 0.3s;
 }
-
 .experience year {
-    font-size: 4em;
+    font-size: 10vw;
     font-weight: bold;
-    color: #999;
+    color: #e2e2e2;
+    /*position: absolute;*/
 }
-
+.experience .titleBlock {
+    display: block;
+    position: relative;
+    height: 8vh;
+    width: 60vw;
+}
+.experience .titleBlock .title {
+    background-color: #ff008c;
+    opacity: 0.9;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    z-index: 3;
+}
+.experience .titleBlock div {
+    position: absolute;
+    z-index: 4;
+    width: inherit;
+    height:inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.experience .titleBlock div h3, .experience .titleBlock div h4 {
+    color: white;
+    margin: 0;
+    text-transform: capitalize;
+}
+.experience .titleBlock .title:after {
+    content: "";
+    background-color: #004b96;
+    opacity: 0.4;
+    position: absolute;
+    z-index: 2;
+    width: inherit;
+    height: inherit;
+    top: 5px;
+    left: 5px;
+}
+.dots {
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dots div {
+    background-color: #e2e2e2;
+    width: 0.8vh;
+    height: 0.8vh;
+    margin: 0.3vh;
+    border-radius:50%;
+}
 .skill .div {
     color:black;
 }
@@ -190,7 +241,7 @@ button.selected {
     overflow: hidden
 }
 .hiddenMenuList .barsButton, .hiddenMenuList .hiddenMenuButton {
-    background-color: #369;
+    background-color: black;
     outline: none;
     border-radius: 50%;
     width: 7vh;
@@ -203,7 +254,7 @@ button.selected {
     margin-bottom: 1vh;
 }
 .hiddenMenuList .barsButton:focus {
-    background-color: #369;
+    background-color: black;
 }
 .hiddenMenuList .icon {
     font-size: 3vh;
@@ -216,5 +267,22 @@ button.selected {
     to {
         outline: transparent;
         box-shadow: 0 0 0 1px white;
+    }
+}
+
+@media only screen and (min-width: 768px)  {
+    .experience .titleBlock {
+        height: 13vh;
+    }
+    .dots {
+        height: 13vh;
+    }
+}
+@media only screen and (min-width: 1024px)  {
+    .experience .titleBlock {
+        width: 25vw;
+    }
+    .dots {
+        flex-direction: row;
     }
 }

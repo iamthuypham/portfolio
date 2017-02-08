@@ -8,15 +8,23 @@ export default class Project extends Component {
     super(props);
   }
   render() {
-    console.log("This is undefined ? " + this.props.result)
     return (
-      <Row className='experience'>
-        <Col xs={8}>
-          <h2>{this.props.result.title}</h2>
-          <h4>{this.props.result.organization}</h4>
-        </Col>
-        <Col xs={4}><year>{this.props.result.year}</year></Col>
-      </Row>
+      <div className='block'>
+      <Col xs={12} md={3} className='experience center-middle'>
+        <div className='titleBlock'>
+          <div className='title' ></div>
+          <div>
+            <h3>{this.props.result.title}</h3>
+            <h4>{this.props.result.organization}</h4>
+          </div>
+        </div>
+      </Col>
+      <Col xs={12} md={1} className='dots'>
+          <div></div>
+          <div></div>
+          <div></div>
+      </Col>
+      </div>
     )
   }
 }

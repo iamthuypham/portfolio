@@ -65,7 +65,7 @@ class Dashboard extends Component {
       }
     }
     return (
-      <div className='dashboard' style={this.state.newStyle}>
+      <div className='dashboard hScroll' style={this.state.newStyle}>
         { this.props.userSelectAnyMenu ? (results.map((result) => (
           <Result
             key={result._id} 

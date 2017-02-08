@@ -5,6 +5,7 @@ import { ListGroupItem } from 'react-bootstrap';
 
 const selectedMenuStyle = {
   height: '10vh',
+  backgroundColor: 'black',
   WebkistTransition: 'all 0.5s', /* Safari */
   transition: 'all 0.5s',
 }

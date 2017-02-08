@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import FontAwesome from 'react-fontawesome'
 
-import { Media, Button, Modal } from 'react-bootstrap';
+import { Thumbnail, Button, Modal, Col } from 'react-bootstrap';
 
 export default class Project extends Component {
   constructor(props) {
@@ -18,23 +18,20 @@ export default class Project extends Component {
   }
   render() {
     return (
-      <Media className='project' onClick={this.openModal.bind(this)}>
-        <Media.Left>
-          <img width={64} height={64} src="" alt="Image"/>
-        </Media.Left>
-        <Media.Body>
-          <Media.Heading>{this.props.result.name}</Media.Heading>
-          <p>{this.props.result.description}</p>
+        <Col xs={12} md={4} className='project' onClick={this.openModal.bind(this)}>
+          <Thumbnail src={`/images/${this.props.result.logo}`} alt="242x200">
+            <h3>{this.props.result.name}</h3>
+            <p>{this.props.result.description}</p>
+            <p>
+              <Button >Try Now</Button>
+            </p>
+          </Thumbnail>
           <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} >
             <Modal.Body>
               blah blah
             </Modal.Body>
           </Modal>
-        </Media.Body>
-        <Media.Right>
-          <Button className='tryNowButton'>Try Now</Button> 
-        </Media.Right>
-      </Media>
+        </Col>
     )
   }
 }
