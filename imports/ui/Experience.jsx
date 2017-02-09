@@ -3,14 +3,18 @@ import FontAwesome from 'react-fontawesome'
 
 import { Row, Col } from 'react-bootstrap';
 
-export default class Project extends Component {
+export default class Experience extends Component {
   constructor(props) {
     super(props);
   }
+  scrollToCol(e) {
+    var element = document.getElementById('allowScroll');
+    e.deltaY > 0 ? element.scrollLeft += 50 : element.scrollLeft -= 50
+  }
   render() {
     return (
-      <div className='block'>
-      <Col xs={12} md={3} className='experience center-middle'>
+      <Col xs={12} md={6} className='experience center-middle' onWheel={this.scrollToCol}>
+        <year>{this.props.result.year}</year>
         <div className='titleBlock'>
           <div className='title' ></div>
           <div>
@@ -19,16 +23,10 @@ export default class Project extends Component {
           </div>
         </div>
       </Col>
-      <Col xs={12} md={1} className='dots'>
-          <div></div>
-          <div></div>
-          <div></div>
-      </Col>
-      </div>
     )
   }
 }
 
-Project.propTypes = {
+Experience.propTypes = {
   result: PropTypes.object.isRequired
 };

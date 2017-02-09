@@ -44,6 +44,8 @@ class Dashboard extends Component {
   render() {
     let Result
     let results
+    let extraClass = ''
+    let expId = ''
     if (this.props.userSelectAnyMenu) {
     switch (this.props.menu.title) {
       case 'Projects':
@@ -53,6 +55,8 @@ class Dashboard extends Component {
       case 'Experience':
         Result = Experience
         results = this.props.experience
+        extraClass = ' row row-horizon'
+        expId = 'allowScroll'
         break
       case 'Skills':
         Result = Skill
@@ -65,7 +69,7 @@ class Dashboard extends Component {
       }
     }
     return (
-      <div className='dashboard hScroll' style={this.state.newStyle}>
+      <div className={'dashboard'+extraClass} id={expId} style={this.state.newStyle}>
         { this.props.userSelectAnyMenu ? (results.map((result) => (
           <Result
             key={result._id} 

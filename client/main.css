@@ -130,9 +130,11 @@ button.selected {
 }
 
 .dashboard {
+    width: 100vw;
     height: 90vh;
     background-color: white;
     display: none;
+    margin:0;
     padding: 4% 5%;
 }
 .dashboard h4, .dashboard p, .modal-title, .dashboard div {
@@ -165,14 +167,17 @@ button.selected {
     -webkit-transition: right 0.3s;
     transition: right 0.3s;
 }
+.experience {
+    height: 100%;
+}
 .experience year {
     font-size: 10vw;
     font-weight: bold;
     color: #e2e2e2;
-    /*position: absolute;*/
+    
 }
 .experience .titleBlock {
-    display: block;
+    display: inline-block;
     position: relative;
     height: 8vh;
     width: 60vw;
@@ -211,20 +216,14 @@ button.selected {
     top: 5px;
     left: 5px;
 }
-.dots {
-    height: 8vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.dots div {
-    background-color: #e2e2e2;
-    width: 0.8vh;
-    height: 0.8vh;
-    margin: 0.3vh;
-    border-radius:50%;
-}
+/*.experience:after {*/
+/*    content: "\26AB  \26AB  \26AB";*/
+/*    height: 8vh;*/
+/*    position: absolute;*/
+/*    width: 21vw;*/
+/*    font-size: 1em;*/
+/*    color: #e2e2e2;*/
+/*}*/
 .skill .div {
     color:black;
 }
@@ -274,15 +273,23 @@ button.selected {
     .experience .titleBlock {
         height: 13vh;
     }
+    /*.experience:after{*/
+    /*    height: 13vh;*/
+    /*}*/
     .dots {
         height: 13vh;
     }
 }
 @media only screen and (min-width: 1024px)  {
+    .experience year {
+        display: none
+    }
     .experience .titleBlock {
-        width: 25vw;
+        width: 30vw;
+
     }
-    .dots {
-        flex-direction: row;
-    }
+    /*.experience:after {*/
+    /*    width: 11vw;*/
+
+    /*}*/
 }
