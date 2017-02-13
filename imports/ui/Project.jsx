@@ -24,7 +24,7 @@ export default class Project extends Component {
             <p className='desc'>{this.props.result.description}</p>
             <p>
               <Button onClick={this.openModal.bind(this)}>Sneak Peek</Button>
-              <Button >Open App</Button>
+              <Button href={this.props.result.url} target="_blank">Open App</Button>
             </p>
           </Thumbnail>
           <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} >

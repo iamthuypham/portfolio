@@ -166,6 +166,9 @@ button.selected {
 .project .btn:hover {
     background-color: #FF55A3;
 }
+.project .btn:focus {
+    outline: none;
+}
 .experience {
     height: 100%;
 }
