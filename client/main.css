@@ -2,6 +2,9 @@
 * {
     color: white;
 }
+p{
+    font-size: 1.2em;
+}
 .center-middle {
     display: flex;
     flex-direction: column;
@@ -220,15 +223,31 @@ button.selected {
 .skill .div {
     color:black;
 }
-#legend {
+#infoCol {
+    height: 29vw;
+    padding: 0;
+    margin-bottom: 4vh;
+}
+#infoCol div {
+    height: inherit;
+}
+#legend, #detail {
     border: 1px solid #999;
-    width: 60%;
-    box-shadow: 1px 1px 1px #777
+    box-shadow: 1px 1px 1px #777;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#legend svg {
-    margin: 5%;
+#legend svg, #detail div {
+    width: 80%;
+    height: 80%;
 }
-#svg path:hover {
+#detail h4, strong {
+    margin-top: 0;
+    color: black;
+}
+#graph path:hover {
     fill: #FF55A3;
 }
 
@@ -277,9 +296,6 @@ button.selected {
     .experience .titleBlock {
         height: 13vh;
     }
-    /*.experience:after{*/
-    /*    height: 13vh;*/
-    /*}*/
     .dots {
         height: 13vh;
     }
@@ -290,10 +306,14 @@ button.selected {
     }
     .experience .titleBlock {
         width: 30vw;
-
     }
-    /*.experience:after {*/
-    /*    width: 11vw;*/
-
-    /*}*/
+    #infoCol {
+        height: 60vh;
+        margin: 0;
+    }
+    #infoCol > div {
+        height: 25vh;
+        padding: 0 5vh;
+        margin-bottom: 5vh;
+    }
 }

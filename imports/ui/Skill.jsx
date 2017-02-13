@@ -37,54 +37,96 @@ import { Row, Col } from 'react-bootstrap';
 export default class Skill extends Component {
   constructor(props) {
     super(props);
-  }
-    
-  componentDidMount() {
-    
-    
-    
-  }
-  
-  getArc(d) {
-    console.log(d)
-    var arc = (d) => { return d3.arc() 
-    .innerRadius(y(d[0]))
-    .outerRadius(y(d[1]))
-    .startAngle(0)
-    .endAngle(Math.PI / 2);
+    this.state = {
+      clickSkill: '',
+      clickYear:'',
+      totalHours: 0,
+      thisYearHours: 0,
+      yOE: 0
     }
-    console.log(arc)
+  }
+  showDetail(d,index) {
+    console.log(d)
+    var yearCount = -1
+    var thisYearHours = d[1] - d[0]
+    var clickYear = ''
+    for(var key in d.data){
+      console.log(d.data[key])
+      if(d.data[key] !== 0 && typeof(d.data[key]) === 'number' && key !== 'total'){
+        yearCount += 1 
+      }
+      console.log(yearCount)
+    }
+    switch (index) {
+      case 0: clickYear = "first learned"; break;
+      case 1: clickYear = "first"; break;
+      case 2: clickYear = "second"; break;
+      case 3: clickYear = "third"; break;
+    }
+    
+    this.setState({
+      clickSkill: d.data.skill,
+      clickYear: clickYear,
+      totalHours: d.data.total,
+      thisYearHours: d[1] - d[0],
+      yOE: yearCount,
+    })
   }
   render() {
     var arc = d3.arc()
+    let detailText
+    let defaultText = (<p style={{color: '#999'}}>Click on graph to view some details...</p>)
+    let expert = (
+      <p>Thuy has <strong>{this.state.yOE} year(s) of experience </strong> in applying <strong>{this.state.clickSkill}</strong>. In the <strong>{this.state.clickYear}</strong> year, she has spent <strong>{this.state.thisYearHours} hours</strong> using it. So far, she has accumulated <strong>{this.state.totalHours} hours</strong>.</p>
+      )
+    let newbie = (
+      <p>When Thuy {this.state.clickYear} about <strong>{this.state.clickSkill}</strong>, she spent <strong>{this.state.thisYearHours} hours</strong> using it. Today she has accumulated <strong>{this.state.totalHours} hours </strong> in this skill.</p>
+      )
+    if (this.state.clickSkill===''){
+      detailText = defaultText
+    }
+    
+    if (this.state.clickSkill){
+      if(this.state.clickYear==='first learned'){
+        detailText = newbie
+      } else {
+        detailText = expert
+      }
+    }
     return (
       <Row>
-        <Col xs={12} md={4}>
-          <Col xs={6} md={12}>
+        <Col xs={12} md={5} id='infoCol'>
+          <Col xs={5} md={12}>
             <div id='legend'>
-            <svg viewBox="0 0 175 115">
-              <g>
-                { data.columns.slice(1).map((column, i)=>(
-                  <g transform={"translate(0," +(i*20)+ ")"}>
-                    <rect width={18} height={18} fill={z(i)}></rect>
-                    <text x={24} y={9} dy="0.35em">{column} {i>0?"of experience":"experience"}</text>
-                  </g>
-                ))}
-              </g>
-            </svg>
+              <svg>
+                <g>
+                  { data.columns.slice(1).map((column, i)=>(
+                    <g transform={"translate(0," +(i*20)+ ")"}>
+                      <rect width={18} height={18} fill={z(i)}></rect>
+                      <text x={24} y={9} dy="0.35em">{column} {i>0?"of experience":"experience"}</text>
+                    </g>
+                  ))}
+                </g>
+              </svg>
             </div>
           </Col>
-          <Col xs={6} md={12}>Hello?</Col>
+          <Col xs={7} md={12}>
+            <div id='detail'>
+              <div>
+                {detailText}
+              </div>
+            </div>
+          </Col>
         </Col>
         <Col xs={12} md={7}>
-          <svg id='svg' width={width} height={height} viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" style={{width:'100%', height:'100%'}}>
+          <svg id='graph' width={width} height={height} viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" style={{width:'100%', height:'100%'}}>
         <g transform={'translate('+width/2+','+height/2+')'}>
           <g id='graph'>
           
-            { stack.map((aStack, index) => (
-              <g fill={z(index)}>
+            { stack.map((aStack, gIndex) => (
+              <g fill={z(gIndex)}>
                 {aStack.map((d,index) => (
-                  <path d={arc({innerRadius: y(d[0]),outerRadius: y(d[1]), startAngle: x(d.data.skill), endAngle: x(d.data.skill)+x.bandwidth(), padAngle: 0.01, padRadius: innerRadius})}>
+                  <path d={arc({innerRadius: y(d[0]),outerRadius: y(d[1]), startAngle: x(d.data.skill), endAngle: x(d.data.skill)+x.bandwidth(), padAngle: 0.01, padRadius: innerRadius})} key={index} onClick={this.showDetail.bind(this, d, gIndex)}>
                   </path>
                 ))}   
               </g>
