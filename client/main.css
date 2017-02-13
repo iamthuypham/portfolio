@@ -43,6 +43,7 @@ p{
 }
 h1, h2, h3 {
     margin-top: 10px;
+    text-transform: capitalize;
 }
 a, a:hover, a:visited {
     text-decoration: none;
@@ -144,31 +145,26 @@ button.selected {
     color: black;
 }
 .project .thumbnail {
-    border: none;;
+    border: none;
 }
 .project .thumbnail img {
     padding: 5% 20%;
 }
-.project .media-right {
-    width: 12%;
+
+.project .desc {
+    height: 5vh;
+    margin-bottom: 2vh;
 }
-.project .tryNowButton {
-    font-size: 14px;
-    background-color: #999;
+.project .btn {
+    border: none;
+    margin-right: 1vw;
+    border-radius: 5px;
+    background-color: black;
+    font-size: 1em;
     color: white;
-    position:absolute;
-    right: 4.5%;
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
-    /*box-shadow: 0 1px 0 #777;*/
 }
-.project .tryNowButton:hover {
-    outline: none;
-    color: white;
+.project .btn:hover {
     background-color: #FF55A3;
-    right: 4%;
-    -webkit-transition: right 0.3s;
-    transition: right 0.3s;
 }
 .experience {
     height: 100%;
@@ -206,7 +202,6 @@ button.selected {
 .experience .titleBlock div h3, .experience .titleBlock div h4 {
     color: white;
     margin: 0;
-    text-transform: capitalize;
 }
 .experience .titleBlock .title:after {
     content: "";
@@ -298,6 +293,10 @@ button.selected {
     }
     .dots {
         height: 13vh;
+    }
+    .project .desc {
+        height: 12vh;
+        margin-bottom: 2vh;
     }
 }
 @media only screen and (min-width: 1024px)  {

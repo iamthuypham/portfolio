@@ -18,12 +18,13 @@ export default class Project extends Component {
   }
   render() {
     return (
-        <Col xs={12} md={4} className='project' onClick={this.openModal.bind(this)}>
+        <Col xs={12} md={4} className='project'>
           <Thumbnail src={`/images/${this.props.result.logo}`} alt="242x200">
             <h3>{this.props.result.name}</h3>
-            <p>{this.props.result.description}</p>
+            <p className='desc'>{this.props.result.description}</p>
             <p>
-              <Button >Try Now</Button>
+              <Button onClick={this.openModal.bind(this)}>Sneak Peek</Button>
+              <Button >Open App</Button>
             </p>
           </Thumbnail>
           <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} >
