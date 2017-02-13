@@ -220,6 +220,14 @@ button.selected {
 .skill .div {
     color:black;
 }
+#legend {
+    border: 1px solid #999;
+    width: 60%;
+    box-shadow: 1px 1px 1px #777
+}
+#legend svg {
+    margin: 5%;
+}
 #svg path:hover {
     fill: #FF55A3;
 }

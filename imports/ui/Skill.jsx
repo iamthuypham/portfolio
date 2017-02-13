@@ -15,7 +15,7 @@ import { Row, Col } from 'react-bootstrap';
     const x = d3.scaleBand().range([0, 2 * Math.PI]).align(0);
     console.log(extraObj)
     const y = extraObj.scaleRadial().range([innerRadius, outerRadius])
-    const z = d3.scaleOrdinal().range(["#B7DDF7","#8FC4E8","#7198D6","#6C61BF","#834EB7", "#DD2EB2","#FF169A"]) 
+    const z = d3.scaleOrdinal().range(["#8FC4E8","#7198D6","#6C61BF","#834EB7", "#DD2EB2","#FF169A"]) 
     
     var data = dataFile.data
     // Add columns obj to data array
@@ -59,8 +59,22 @@ export default class Skill extends Component {
     var arc = d3.arc()
     return (
       <Row>
-        <Col xs={12} md={5}>
-          <h1>HELLO?</h1>
+        <Col xs={12} md={4}>
+          <Col xs={6} md={12}>
+            <div id='legend'>
+            <svg viewBox="0 0 175 115">
+              <g>
+                { data.columns.slice(1).map((column, i)=>(
+                  <g transform={"translate(0," +(i*20)+ ")"}>
+                    <rect width={18} height={18} fill={z(i)}></rect>
+                    <text x={24} y={9} dy="0.35em">{column} {i>0?"of experience":"experience"}</text>
+                  </g>
+                ))}
+              </g>
+            </svg>
+            </div>
+          </Col>
+          <Col xs={6} md={12}>Hello?</Col>
         </Col>
         <Col xs={12} md={7}>
           <svg id='svg' width={width} height={height} viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet" style={{width:'100%', height:'100%'}}>
@@ -87,7 +101,7 @@ export default class Skill extends Component {
             })}
           </g>
           <g textAnchor='middle'>
-            {y.ticks(5).slice(1).map((r)=>(
+            {y.ticks(3).slice(1).map((r)=>(
               <g>
                 <circle fill='none' stroke='#000' r={y(r)}></circle>
                 <text y={-y(r)} dy='0.35em' fill='none' stroke='#fff' strokeWidth={5}>{r} hrs</text>
