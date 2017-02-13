@@ -216,16 +216,12 @@ button.selected {
     top: 5px;
     left: 5px;
 }
-/*.experience:after {*/
-/*    content: "\26AB  \26AB  \26AB";*/
-/*    height: 8vh;*/
-/*    position: absolute;*/
-/*    width: 21vw;*/
-/*    font-size: 1em;*/
-/*    color: #e2e2e2;*/
-/*}*/
+
 .skill .div {
     color:black;
+}
+#svg path:hover {
+    fill: #FF55A3;
 }
 
 /* Hidden Menu Style */
