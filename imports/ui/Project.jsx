@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import FontAwesome from 'react-fontawesome'
 
-import { Thumbnail, Button, Modal, Col } from 'react-bootstrap';
+import { Thumbnail, Button, Modal, Col, Image } from 'react-bootstrap';
+// import blankHand from '../public/images/blankHand.png'
 
 export default class Project extends Component {
   constructor(props) {
@@ -27,10 +28,12 @@ export default class Project extends Component {
               <Button href={this.props.result.url} target="_blank">Open App</Button>
             </p>
           </Thumbnail>
-          <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} >
-            <Modal.Body>
-              blah blah
-            </Modal.Body>
+          <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} className='modalLayer'>
+            <Image id='blankHand' src='/images/blankHandCut.png'/>
+            <div className='screenWrapper'>
+              <Image className="screen" src={`/images/${this.props.result.screen}`} />
+            </div>
+            <div id="closeButton" onClick={this.closeModal.bind(this)}>×</div>
           </Modal>
         </Col>
     )

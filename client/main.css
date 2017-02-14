@@ -169,6 +169,49 @@ button.selected {
 .project .btn:focus {
     outline: none;
 }
+.modalLayer {
+    background-color: rgba(0,0,0,0.3);
+}
+.modalLayer .modal-dialog {
+    position: absolute;
+    bottom: 0;
+    margin: 0 20vw;
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.modalLayer .modal-content {
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+#blankHand {
+    height: 70vh;
+}
+.modalLayer .screenWrapper {
+    background-color: black;
+    position: absolute;
+    height: 70.4%;
+    width: 49.3%;
+    bottom: 13.7%;
+    left: 30.4%;
+    overflow: hidden;
+}
+.modalLayer .screen {
+    height: 100%;
+    width: 100%;
+    border: 3px solid black;
+}
+#closeButton {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    color: white;
+    font-size: 6vh;
+    cursor: pointer;
+}
 .experience {
     height: 100%;
 }
@@ -219,7 +262,7 @@ button.selected {
 }
 
 .skill .div {
-    color:black;
+    color: black;
 }
 #infoCol {
     height: 29vw;
@@ -300,6 +343,13 @@ button.selected {
     .project .desc {
         height: 12vh;
         margin-bottom: 2vh;
+    }
+    .modalLayer .modal-dialog {
+        margin: 0 26vw;
+        width: 48vw;
+    }
+    #blankHand {
+        height: 90vh;
     }
 }
 @media only screen and (min-width: 1024px)  {
