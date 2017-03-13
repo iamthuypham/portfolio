@@ -40,8 +40,8 @@ app.get('/api/comments', function(req, res) {
 app.post('/api/comments', function (req, res) {
     // setup e-mail data
   var mailOptions = {
-    from: 'BLV Development Member <dev.betterlifevietnam@gmail.com>', // sender address
-    to: ['dev.betterlifevietnam@gmail.com', 'phamrosalind@gmail.com'], // list of receivers
+    from: 'New Contact <phamrosalind@gmail.com>', // sender address
+    to: ['phamrosalind@gmail.com'], // list of receivers
     subject: 'New Contact from '+ req.body.name, // Subject line
     text: req.body.message, // plaintext body
     html: '<h4> Name: '+req.body.name+'</h4><h4>Email: '+req.body.email+'</h4><h4>Message: "'+ req.body.message +'"</h4>' // html body

@@ -1,0 +1,64 @@
+{
+    "generalInfo":{
+        "name":"Thuy Pham",
+        "avatar":"avatar.jpg",
+        "title":"Web Developer"
+    },
+    "MenusCollection":[
+        {"_id": "58976946f36d2814d65ae6c0","title": "Projects", "icon": "rocket"},
+        {"_id": "58976d3ff36d2814d65ae79f", "title": "Experience", "icon": "th-list"},
+        {"_id": "58976d51f36d2814d65ae7a0","title": "Skills", "icon": "code"},
+        {"_id": "58976d62f36d2814d65ae7a1","title": "Testimony", "icon": "comment-o"}
+    ],
+    "ProjectsCollection":[
+        {"_id":"5898dae3734d1d4347581fb8","name": "music app", "description": "Choose your favorite album and turn on the music.", "logo": "musicAppLogo.png",
+    "url": "https://secret-woodland-43823.herokuapp.com/",
+    "screen": "musicAppScr.png"},
+        {"_id":"58976dc0f36d2814d65ae7b2", "name": "real-time chat client",
+    "description": "A messaging web application that connects you and your friends instantly. No signup! Pick a name, a room, and send a message.",
+    "logo": "chatAppLogo.png",
+    "url": "https://peaceful-lowlands-62733.herokuapp.com/",
+    "screen": "chatAppScr.png"},
+        {"_id":"58976dd6f36d2814d65ae7b8","name": "time management tool",
+    "description": "Be productive with this timer using the Pomodoro method. Are you ready to work 25 minutes without distraction?",
+    "logo": "timerAppLogo.png",
+    "url": "https://obscure-dusk-18711.herokuapp.com/",
+    "screen": "timerAppScr.png"}
+    ],
+    "ExperienceCollection":[
+        {"_id":"58976e65f36d2814d65ae7e9", "year": "2016",
+    "dateFrom": "07/2015",
+    "dateTo": "09/2016",
+    "title": "QA analyst",
+    "organization": "Benefit Solution Inc."},
+        {"_id":"589929f3734d1d4347586285", "year": "2015",
+    "dateFrom": "07/2014",
+    "dateTo": "08/2015",
+    "title": "business analyst",
+    "organization": "Inviso Inc."},
+        {"_id":"589b9385f36d2837a7c521fc","year": "2014",
+    "dateFrom": "7/2013",
+    "dateTo": "7/2014",
+    "title": "Intern",
+    "organization": "Year Up & Microsoft"},
+        {"_id":"58976e56f36d2814d65ae7e5","year": "2017",
+    "dateFrom": "12/2016",
+    "dateTo": "current",
+    "title": "web developer",
+    "organization": "Better Life Vietnam",
+    "detail": [
+        {
+            "1": "Launching website, include: SEO, NodeMailer, and CMS."
+        },
+        {
+            "2": "Programming reusable components"
+        },
+        {
+            "3": "Implementing new visual responsive designs"
+        },
+        {
+            "4": "Deploying, testing and maintaining website www.betterlifevietnam.org"
+        }
+    ]}
+        ]
+}

@@ -1,0 +1,174 @@
+{
+    "data": [
+        {
+            "skill": "AJAX",
+            "New": 25,
+            "1 year": 25,
+            "2 years": 10,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        },{   "skill": "HTML",
+      
+            "New": 210,
+            "1 year": 139,
+            "2 years": 120,
+            "3 years": 50,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "CSS",
+       
+            "New": 52,
+            "1 year": 159,
+            "2 years": 200,
+            "3 years": 88,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "Javascript",
+     
+            "New": 32,
+            "1 year": 109,
+            "2 years": 209,
+            "3 years": 185,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "DOM",
+      
+            "New": 242,
+            "1 year": 249,
+            "2 years": 19,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "CMS",
+         
+            "New": 52,
+            "1 year": 50,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "Node.js",
+        
+            "New": 9,
+            "1 year": 10,
+            "2 years": 37,
+            "3 years": 20,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "Testing",
+          
+            "New": 50,
+            "1 year": 180,
+            "2 years": 50,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "SEO",
+          
+            "New": 20,
+            "1 year": 0,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "UI/UX",
+          
+            "New": 29,
+            "1 year": 80,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "jQuery",
+           
+            "New": 152,
+            "1 year": 29,
+            "2 years": 100,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "Git",
+       
+            "New": 22,
+            "1 year": 69,
+            "2 years": 109,
+            "3 years": 90,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "MV*",
+            
+            "New": 50,
+            "1 year": 0,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "API",
+         
+            "New": 103,
+            "1 year": 0,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "Animation",
+         
+            "New": 22,
+            "1 year": 19,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "D3.js",
+         
+            "New": 52,
+            "1 year": 59,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "CLI",
+            
+            "New": 44,
+            "1 year": 159,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        },{
+            "skill": "Ubuntu",
+       
+            "New": 52,
+            "1 year": 259,
+            "2 years": 230,
+            "3 years": 90,
+            "4-6 years": 0,
+            "7+ years": 0
+        }, {
+            "skill": "SVG",
+        
+            "New": 25,
+            "1 year": 90,
+            "2 years": 0,
+            "3 years": 0,
+            "4-6 years": 0,
+            "7+ years": 0
+        }
+    ]
+}
