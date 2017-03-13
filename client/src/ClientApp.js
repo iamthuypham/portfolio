@@ -9,10 +9,8 @@ class ClientApp extends React.Component {
   render () {
     return (
       <Router history={browserHistory}>
-        <Route path='/'>
-          <Route path='/landing' component={GeneralInfo} />
+          <Route path='/' component={GeneralInfo} />
           <Route path='/portfolio' component={Portfolio} />
-        </Route>
       </Router>
     )
   }
