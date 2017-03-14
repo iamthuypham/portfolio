@@ -4,7 +4,7 @@ import React from 'react';
 //Components
 import Project from './Project'
 import Experience from './Experience'
-// import Skill from './Skill'
+import Skill from './Skill'
 import Testimony from './Testimony'
 
 //Styles
@@ -13,6 +13,7 @@ import Testimony from './Testimony'
 
 //Collections
 import data from '../db/data.json'
+import d3_data from '../db/d3_data.json'
 
 const presentDashboardStyle = {
   display: 'block'
@@ -55,10 +56,10 @@ class Dashboard extends React.Component{
         extraClass = ' row row-horizon'
         expId = 'allowScroll'
         break
-      // case 'Skills':
-      //   Result = Skill
-      //   results = data.SkillsCollection
-      //   break
+      case 'Skills':
+        Result = Skill
+        results = data.SkillCollection
+        break
       case 'Testimony':
         Result = Testimony
         results = data.TestimonyCollection
@@ -72,7 +73,7 @@ class Dashboard extends React.Component{
             key={result._id} 
             result={result}
           />
-        ))):('')
+        ))):("")
           
         }
       </div>

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
-import d3 from 'd3'
-import dataFile from '../db/d3_data.json'
-// import extraObj from '../asset/d3-scale-radial'
+import * as d3 from "d3"
+import d3_data from '../db/d3_data.json'
+var extraObj = require('../asset/d3-scale-radial.js')
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -13,10 +13,10 @@ import { Row, Col } from 'react-bootstrap';
 
     const x = d3.scaleBand().range([0, 2 * Math.PI]).align(0);
     // console.log(extraObj)
-    const y = d3.scaleRadial().range([innerRadius, outerRadius])
-    const z = d3.scaleOrdinal().range(["#8FC4E8","#7198D6","#6C61BF","#834EB7", "#DD2EB2","#FF169A"]) 
+  const y = extraObj.scaleRadial().range([innerRadius, outerRadius])
+  const z = d3.scaleOrdinal().range(["#8FC4E8","#7198D6","#6C61BF","#834EB7", "#DD2EB2","#FF169A"]) 
     
-    var data = dataFile.data
+    var data = d3_data.data
     // Add columns obj to data array
     data.columns = Object.keys(data[0])
     // Add total to each data row
@@ -26,11 +26,11 @@ import { Row, Col } from 'react-bootstrap';
       }
       data[k].total = t
     }
-    console.log(data)
+    // console.log(data)
     x.domain(data.map(function(d) { return d.skill; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
-    console.log(x)
+    // console.log(x)
     var stack = d3.stack().keys(data.columns.slice(1))(data)
 
 class Skill extends React.Component {
@@ -45,16 +45,16 @@ class Skill extends React.Component {
     }
   }
   showDetail(d,index) {
-    console.log(d)
+    // console.log(d)
     var yearCount = -1
-    var thisYearHours = d[1] - d[0]
+    // var thisYearHours = d[1] - d[0]
     var clickYear = ''
     for(var key in d.data){
-      console.log(d.data[key])
+      // console.log(d.data[key])
       if(d.data[key] !== 0 && typeof(d.data[key]) === 'number' && key !== 'total'){
         yearCount += 1 
       }
-      console.log(yearCount)
+      // console.log(yearCount)
     }
     switch (index) {
       case 0: clickYear = "first learned"; break;

@@ -1,16 +1,15 @@
-(function(global, factory) {
-  typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("d3-scale")) :
-  typeof define === "function" && define.amd ? define(["exports", "d3-scale"], factory) :
-  (factory(global.d3 = global.d3 || {}, global.d3));
-}(this, function(exports, d3Scale) {
-  'use strict';
+import * as d3 from "d3"
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	(factory((global.d3 = global.d3 || {})));
+}(this, function(exports) {
 
   function square(x) {
     return x * x;
   }
 
   function radial() {
-    var linear = d3Scale.scaleLinear();
+    var linear = d3.scaleLinear();
 
     function scale(x) {
       return Math.sqrt(linear(x));

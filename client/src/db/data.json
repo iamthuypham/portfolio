@@ -25,6 +25,9 @@
     "url": "https://obscure-dusk-18711.herokuapp.com/",
     "screen": "timerAppScr.png"}
     ],
+    "SkillCollection":[
+        {"_id":"In separated file d3_data.json"}
+    ],
     "ExperienceCollection":[
         {"_id":"58976e65f36d2814d65ae7e9", "year": "2016",
     "dateFrom": "07/2015",
