@@ -1,9 +1,7 @@
 import React, { PropTypes } from 'react';
 import '../bootstrap-horizontal.css'
 
-import { 
-  // Row, 
-Col } from 'react-bootstrap';
+import { Col, Image } from 'react-bootstrap';
 
 class Experience extends React.Component {
   // constructor(props) {
@@ -22,8 +20,19 @@ class Experience extends React.Component {
           <div>
             <h3>{this.props.result.title}</h3>
             <h4>{this.props.result.organization}</h4>
+            <h4>{this.props.result.dateFrom} - {this.props.result.dateTo}</h4>
           </div>
         </div>
+        <ul>
+          { this.props.result.detail ? (this.props.result.detail.map((item) => (
+            <li key={item.key}>{Object.values(item)}</li>
+          ))):("")
+          }
+        </ul>
+        { this.props.result.screen ? 
+          (<Image src={`/images/${this.props.result.screen}`} />)
+          :("")
+        } 
       </Col>
     )
   }

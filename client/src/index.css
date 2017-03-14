@@ -226,6 +226,7 @@ button.selected {
     position: relative;
     height: 8vh;
     width: 60vw;
+    margin-bottom: 4vh;
 }
 .experience .titleBlock .title {
     background-color: #ff008c;
@@ -248,6 +249,10 @@ button.selected {
 .experience .titleBlock div h3, .experience .titleBlock div h4 {
     color: white;
     margin: 0;
+    font-size: 0.8em;
+}
+.experience .titleBlock div h4 {
+    font-size: 0.5em;
 }
 .experience .titleBlock .title:after {
     content: "";
@@ -260,7 +265,16 @@ button.selected {
     top: 5px;
     left: 5px;
 }
-
+.experience ul li {
+    color: black;
+    font-size: 0.8em;
+    /*list-style-type:none;*/
+    text-align: left;
+}
+.experience img {
+    width: 50vw;
+    border-radius: 5px;
+}
 .skill .div {
     color: black;
 }
@@ -336,6 +350,15 @@ button.selected {
 @media only screen and (min-width: 768px)  {
     .experience .titleBlock {
         height: 13vh;
+    }
+    .experience .titleBlock div h3 {
+        font-size: 1.5em;
+    }
+    .experience .titleBlock div h4, .experience ul li {
+        font-size: 1em
+    }
+    .experience img {
+        width: 25vw;
     }
     .dots {
         height: 13vh;

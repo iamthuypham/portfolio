@@ -13,7 +13,6 @@ import Testimony from './Testimony'
 
 //Collections
 import data from '../db/data.json'
-import d3_data from '../db/d3_data.json'
 
 const presentDashboardStyle = {
   display: 'block'

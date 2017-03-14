@@ -29,7 +29,7 @@ class Portfolio extends React.Component{
   }
   render() {
     let showedMenu = data.MenusCollection
-    console.log(showedMenu)
+    // console.log(showedMenu)
     let hiddenMenuList = null
     if (this.state.userSelectAnyMenu) {
       const selectedMenuId = this.state.selectedMenuId

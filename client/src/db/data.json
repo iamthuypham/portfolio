@@ -29,39 +29,69 @@
         {"_id":"In separated file d3_data.json"}
     ],
     "ExperienceCollection":[
-        {"_id":"58976e65f36d2814d65ae7e9", "year": "2016",
-    "dateFrom": "07/2015",
-    "dateTo": "09/2016",
-    "title": "QA analyst",
-    "organization": "Benefit Solution Inc."},
-        {"_id":"589929f3734d1d4347586285", "year": "2015",
-    "dateFrom": "07/2014",
-    "dateTo": "08/2015",
-    "title": "business analyst",
-    "organization": "Inviso Inc."},
-        {"_id":"589b9385f36d2837a7c521fc","year": "2014",
-    "dateFrom": "7/2013",
-    "dateTo": "7/2014",
-    "title": "Intern",
-    "organization": "Year Up & Microsoft"},
+        {"_id":"1111111111111111","year": "2017",
+        "dateFrom": "1/2017",
+        "dateTo": "present",
+        "title": "Web Design Freelancer",
+        "organization": "Collect Designs",
+        "detail": [
+            {"1": "Launching website, SEO, CMS for small businesses"},
+            {"2": "Designing logo and brand identity"},
+            {"3": "Building visual marketing funnels"}
+        ],
+        "screen":"frScr.png"
+        },
         {"_id":"58976e56f36d2814d65ae7e5","year": "2017",
-    "dateFrom": "12/2016",
-    "dateTo": "current",
-    "title": "web developer",
-    "organization": "Better Life Vietnam",
-    "detail": [
-        {
-            "1": "Launching website, include: SEO, NodeMailer, and CMS."
+        "dateFrom": "12/2016",
+        "dateTo": "present",
+        "title": "Web Developer",
+        "organization": "Better Life Vietnam",
+        "detail": [
+            {
+                "1": "Launching website, include: SEO, NodeMailer, and CMS"
+            },
+            {
+                "2": "Building reusable components"
+            },
+            {
+                "3": "Implementing new visual responsive designs"
+            },
+            {
+                "4": "Deploying, testing and maintaining website"
+            }
+        ],
+        "screen":"blvScr.png"
         },
-        {
-            "2": "Programming reusable components"
+        {"_id":"58976e65f36d2814d65ae7e9", "year": "2016",
+        "dateFrom": "07/2015",
+        "dateTo": "09/2016",
+        "title": "Product Analyst",
+        "organization": "Benefit Solution Inc.",
+        "detail": [
+            {"1":"Assisting UI developers in designing production-ready web frontend written in JavaScript & jQuery"},
+            {"2":"Responsible for quality assurance through the development process: unit testing and code review"},
+            {"3":"Supporting full process of Agile Software Development: Plan, Design, Test, Release"},
+            {"4":"Writing & executing test cases and user acceptance tests"}
+            ]
         },
-        {
-            "3": "Implementing new visual responsive designs"
+        {"_id":"589929f3734d1d4347586285", "year": "2015",
+        "dateFrom": "07/2014",
+        "dateTo": "08/2015",
+        "title": "Business Analyst",
+        "organization": "Inviso Inc.",
+        "detail":[
+            {"1":"Gathering requirements & designing Power BI Reports for demos using Excel, Power Pivot, DAX"}    
+        ],
+        "screen":"baScr.png"
         },
-        {
-            "4": "Deploying, testing and maintaining website www.betterlifevietnam.org"
-        }
-    ]}
+        {"_id":"589b9385f36d2837a7c521fc","year": "2014",
+        "dateFrom": "7/2013",
+        "dateTo": "7/2014",
+        "title": "PowerBI Report Intern",
+        "organization": "Year Up & Microsoft SESIT",
+        "detail":[
+            {"1":"Gathering requirements & designing Power BI Reports for demos using Excel, Power Pivot, DAX"}    
         ]
+        }
+    ]
 }
