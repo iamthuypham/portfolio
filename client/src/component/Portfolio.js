@@ -22,10 +22,17 @@ class Portfolio extends React.Component{
     // Session.set('selectedMenu', id._str )
     // const selectedIdStr = Session.get('selectedMenu')
     //Change state to reload each menu
-    this.setState({
-      userSelectAnyMenu: true,
-      selectedMenuId: id
-    })
+    if (id !== this.state.selectedMenuId){
+      this.setState({
+        userSelectAnyMenu: true,
+        selectedMenuId: id
+      })
+    } else {
+      this.setState({
+        userSelectAnyMenu: false,
+        selectedMenuId: '',
+      })
+    }
   }
   render() {
     let showedMenu = data.MenusCollection
