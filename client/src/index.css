@@ -148,7 +148,7 @@ button.selected {
     border: none;
 }
 .project .thumbnail img {
-    padding: 5% 20%;
+    padding: 0% 20%;
 }
 
 .project .desc {

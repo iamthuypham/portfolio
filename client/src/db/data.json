@@ -11,19 +11,32 @@
         {"_id": "58976d62f36d2814d65ae7a1","title": "Testimony", "icon": "comment-o"}
     ],
     "ProjectsCollection":[
-        {"_id":"5898dae3734d1d4347581fb8","name": "music app", "description": "Choose your favorite album and turn on the music.", "logo": "musicAppLogo.png",
-    "url": "https://secret-woodland-43823.herokuapp.com/",
-    "screen": "musicAppScr.png"},
+        {"_id":"5898dae3734d1d4347581fb8","name": "music app", "description": "Choose your favorite album and turn on the music.",
+        "logo": "musicAppLogo.png",
+        "url": "https://secret-woodland-43823.herokuapp.com/",
+        "screen": "musicAppScr.png"},
         {"_id":"58976dc0f36d2814d65ae7b2", "name": "real-time chat client",
-    "description": "A messaging web application that connects you and your friends instantly. No signup! Pick a name, a room, and send a message.",
-    "logo": "chatAppLogo.png",
-    "url": "https://peaceful-lowlands-62733.herokuapp.com/",
-    "screen": "chatAppScr.png"},
+        "description": "A messaging web application that connects you and your friends instantly. No signup! Pick a name, a room, and send a message.",
+        "logo": "chatAppLogo.png",
+        "url": "https://peaceful-lowlands-62733.herokuapp.com/",
+        "screen": "chatAppScr.png"},
         {"_id":"58976dd6f36d2814d65ae7b8","name": "time management tool",
-    "description": "Be productive with this timer using the Pomodoro method. Are you ready to work 25 minutes without distraction?",
-    "logo": "timerAppLogo.png",
-    "url": "https://obscure-dusk-18711.herokuapp.com/",
-    "screen": "timerAppScr.png"}
+        "description": "Be productive with this timer using the Pomodoro method. Are you ready to work 25 minutes without distraction?",
+        "logo": "timerAppLogo.png",
+        "url": "https://obscure-dusk-18711.herokuapp.com/",
+        "screen": "timerAppScr.png"},
+        {"_id":"20","name": "Real Estate Company",
+        "description": "Logo, Brand Identity, Business Card, Online Contact Form.",
+        "logo": "pplScr.jpg",
+        "url": "https://ppl-dev.herokuapp.com/",
+        "screen":""
+        },
+        {"_id":"21","name": "Homemade Food Community",
+        "description": "A network creates healthy homemade foods.",
+        "logo": "chuScr.jpg",
+        "url": "http://www.churecipe.com/",
+        "screen":""
+        }
     ],
     "SkillCollection":[
         {"_id":"In separated file d3_data.json"}

@@ -20,12 +20,14 @@ class Project extends React.Component {
   render() {
     return (
         <Col xs={12} md={4} className='project'>
-          <Thumbnail src={`/images/${this.props.result.logo}`} alt="242x200">
+          <Thumbnail src={`/images/${this.props.result.logo}`}>
             <h3>{this.props.result.name}</h3>
             <p className='desc'>{this.props.result.description}</p>
             <p>
-              <Button onClick={this.openModal.bind(this)}>Sneak Peek</Button>
-              <Button href={this.props.result.url} target="_blank">Open App</Button>
+              {this.props.result.screen ? (
+                <Button onClick={this.openModal.bind(this)}>Sneak Peek</Button>
+              ):("")}
+              <Button href={this.props.result.url} target="_blank">Open Link</Button>
             </p>
           </Thumbnail>
           <Modal show={this.state.userSelectModal} onHide={this.closeModal.bind(this)} className='modalLayer'>
