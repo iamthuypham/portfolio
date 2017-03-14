@@ -78,7 +78,7 @@ a {
     position: absolute;
     width: 100%;
     top: 60%;
-    padding: 0 32%;
+    padding: 0 5%;
 }
 
 /*Portfolio page*/
@@ -348,6 +348,9 @@ button.selected {
 }
 
 @media only screen and (min-width: 768px)  {
+    .action {
+        padding: 0 32%;
+    }
     .experience .titleBlock {
         height: 13vh;
     }

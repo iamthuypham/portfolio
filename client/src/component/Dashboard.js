@@ -5,7 +5,7 @@ import React from 'react';
 import Project from './Project'
 import Experience from './Experience'
 import Skill from './Skill'
-import Testimony from './Testimony'
+import ContactMe from './ContactMe'
 
 //Styles
 // import { ListGroup } from 'react-bootstrap';
@@ -59,9 +59,9 @@ class Dashboard extends React.Component{
         Result = Skill
         results = data.SkillCollection
         break
-      case 'Testimony':
-        Result = Testimony
-        results = data.TestimonyCollection
+      case 'Contact Me':
+        Result = ContactMe
+        results = data.ContactMe
         break
       }
     }

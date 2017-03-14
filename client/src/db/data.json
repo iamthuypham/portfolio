@@ -8,7 +8,7 @@
         {"_id": "58976946f36d2814d65ae6c0","title": "Projects", "icon": "rocket"},
         {"_id": "58976d3ff36d2814d65ae79f", "title": "Experience", "icon": "th-list"},
         {"_id": "58976d51f36d2814d65ae7a0","title": "Skills", "icon": "code"},
-        {"_id": "58976d62f36d2814d65ae7a1","title": "Testimony", "icon": "comment-o"}
+        {"_id": "58976d62f36d2814d65ae7a1","title": "Contact Me", "icon": "comment-o"}
     ],
     "ProjectsCollection":[
         {"_id":"5898dae3734d1d4347581fb8","name": "music app", "description": "Choose your favorite album and turn on the music.",
@@ -106,5 +106,8 @@
             {"1":"Gathering requirements & designing Power BI Reports for demos using Excel, Power Pivot, DAX"}    
         ]
         }
+    ],
+    "ContactMe":[
+        {"_id":"A separated contact form"}
     ]
 }

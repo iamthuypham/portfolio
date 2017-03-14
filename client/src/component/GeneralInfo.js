@@ -17,7 +17,7 @@ class GeneralInfo extends React.Component {
         <div className='action center-middle'>
           <Row>
             <Col xs={6}> 
-              <Button className='main-btn'><Link to='/portfolio'>Hire Me!</Link></Button>
+              <Button className='main-btn'><a href='https://rosa118.typeform.com/to/RdL9yW'>Hire Me!</a></Button>
             </Col>
             <Col xs={6}> 
               <Button><Link to='/portfolio'>Portfolio</Link></Button>

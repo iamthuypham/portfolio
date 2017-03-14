@@ -17,7 +17,7 @@ class Portfolio extends React.Component{
       selectedMenuId: '',
     }
   }
-  selectThisMenu(id) {
+  selectThisMenu(id, title) {
     //Create a session for this selected menu
     // Session.set('selectedMenu', id._str )
     // const selectedIdStr = Session.get('selectedMenu')
